@@ -54,7 +54,7 @@ const Emitter = function() {
 		});
 		// delete all the objects with matching names (multiple names cannot be deleted in same time)
 		arr.forEach(name => {
-			const bridge = listenerNames.indexOf(name) >= 0 ? listenerArray.splice(listenerNames.indexOf(name)) : null;
+			const bridge = listenerNames.indexOf(name) >= 0 ? listenerArray.splice(listenerNames.indexOf(name),1) : null;
 		});
 	};
 }
